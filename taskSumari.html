@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/taskSumari.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <title>Task Summary</title>
+  </head>
+<body>
+
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light ">
+    <a class="navbar-brand" href="#">Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Inventory
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="inventoriMetrik.html">Inventory Data Metric</a>
+            <a class="dropdown-item" href="valueDepresiasi.html">Value and Depreciation</a>
+            <a class="dropdown-item" href="ocupansiUtili.html">Occupancy and Utillzation</a>
+            <a class="dropdown-item" href="peformaKondisi.html">Performance and Condition</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Task
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item active" href="taskSumari.html">Task Summary</a>
+            <a class="dropdown-item" href="taskDitel.html">Task Detail</a>
+            <a class="dropdown-item" href="progres.html">Progress</a>
+            <a class="dropdown-item" href="taskMetrik.html">Task Metric</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Header Akhir -->
+
+  <div class="container-fluid">
+
+    <!-- Judul -->
+    <div class="row judul">
+      <!-- Judul Page -->
+      <div class="col-sm-6 align-self-center">
+        <p class="judul-page">Task Summary</p>
+      </div>
+      <!-- Dropdown Keterangan Tahun,Bulan,Hari -->
+      <div class="col-sm-6 align-self-center d-flex justify-content-end">
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Month
+          </button>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="#">Year</a>
+            <a class="dropdown-item" href="#">Day</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Judul Akhir -->
+
+    <!-- Perbandingan -->
+    <div class="row perbandingan">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="head">
+              <p>Main Task Comparison</p>
+              <hr>
+            </div>
+            <div class="chart">
+              <canvas id="task-perbandingan" width="400" height="150"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Perbandingan Akhir -->
+
+    <!-- Chart Tugas -->
+    <div class="row chart-doughnut">
+      <!-- Tugas Prioritas -->
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="head">
+              <p>Priority Tasks</p>
+              <hr>
+            </div>
+            <div class="chart">
+              <canvas id="task-prioritas" width="400" height="200"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tugas Status -->
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="head">
+              <p>Task Status</p>
+              <hr>
+            </div>
+            <div class="chart">
+              <canvas id="task-status" width="400" height="200"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Chart Tugas Akhir -->
+
+    <!-- Tabel -->
+    <div class="row tabel">
+      <!-- Tabel Daftar Tugas-->
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="head">
+            <p>Task Summary Detail</p>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Main Task</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Assignees</th>
+                  <th scope="col">End Date</th>
+                  <th scope="col">Progress</th>
+                  <th scope="col">Priority</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Maintenance</th>
+                  <td>Pemeliharaan Rontgen</td>
+                  <td>Ade & Yuda</td>
+                  <td>16 January 2017</td>
+                  <td class="progres">60%</td>
+                  <td class="prioritas-high"><i data-feather="alert-triangle"></i></td>
+                  <td><span class="badge status-ongoing">Ongoing</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Repair</th>
+                  <td>Memperbaiki Ambulan</td>
+                  <td>Maman & Ujang</td>
+                  <td>13 January 2017</td>
+                  <td class="progres">100%</td>
+                  <td class="prioritas-medium"><i data-feather="alert-triangle"></i></td>
+                  <td><span class="badge status-sukses">Completed</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Upgrade</th>
+                  <td>Mengganti Kulkas Kantin</td>
+                  <td>Sakti</td>
+                  <td>14 January 2017</td>
+                  <td class="progres">10%</td>
+                  <td class="prioritas-low"><i data-feather="alert-triangle"></i></td>
+                  <td><span class="badge status-delay">Delay</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Stock Opname</th>
+                  <td>Menghitung Persediaan Masker</td>
+                  <td>Bayu, Ayu, Yuni</td>
+                  <td>18 January 2017</td>
+                  <td class="progres">5%</td>
+                  <td class="prioritas-low"><i data-feather="alert-triangle"></i></td>
+                  <td><span class="badge status-cancel">Canceled</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Tabel Akhir -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <!-- Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script type="text/javascript" src="js/taskSumari.js"></script>
+    <!-- Icon -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+</body>
+</html>
