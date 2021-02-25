@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'inter', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: #F7F7F7 !important;
+}
+
+/* Font */
+.keterangan-singkat .jumlah {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.keterangan-singkat .status p {
+  font-size: 20px;
+  font-weight: 400;
+  opacity: .65;
+}
+
+.head p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.tabel .card .head {
+  padding: 20px 0 0 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+/* Font Akhir */
+
+
+.row:not(.judul) {
+  margin-bottom: 30px;
+}
+
+.judul-page {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+hr {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+/* Header */
+nav {
+  border-bottom: 1px solid rgba(0,0,0,.2);
+}
+
+.dropdown-toggle {
+  font-family: 'inter', sans-serif;
+  font-size: 16px;
+}
+
+.navbar-brand {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+}
+
+.dropdown-item {
+  line-height: 200%;
+  font-family: 'Inter', sans-serif;
+  opacity: .6;
+}
+
+.nav-item {
+  padding: 10px;
+}
+
+
+/* Tabel */
+
+.progres {
+  color: #27AE60;
+  font-weight: bold;
+}
+
+.status-sukses {
+  background-color: #27AE60;
+  font-size: 14px;
+  color: white;
+}
+
+.status-ongoing {
+  background-color: #3498db;
+  font-size: 14px;
+  color: white;
+}
+
+.status-cancel {
+  background-color: #e74c3c;
+  font-size: 14px;
+  color: white;
+}
+
+.status-delay {
+  background-color: #f1c40f;
+  font-size: 14px;
+  color: white;
+}
+
+.prioritas-high {
+  color: #e74c3c;
+}
+
+.prioritas-medium {
+  color: #f1c40f;
+}
+
+.prioritas-low {
+  color: #3498db;
+}
