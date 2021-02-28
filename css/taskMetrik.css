@@ -1,0 +1,49 @@
+nav {
+  border-bottom: 1px solid rgba(0,0,0,.2);
+}
+
+.dropdown-toggle {
+  font-family: 'inter', sans-serif !important;
+  font-size: 16px;
+}
+
+.navbar-brand {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 30px;
+}
+
+.dropdown-item {
+  line-height: 200%;
+  font-family: 'Inter', sans-serif !important;
+  opacity: .6;
+}
+
+.nav-item {
+  padding: 10px;
+}
+body{
+	background-color:lightgray!important;
+}
+h1{
+	font-family: 'Inter', sans-serif;
+	text-align: center;
+
+}
+.card1.card-body{
+	background-color: #ffffff;
+}
+
+.row{
+	margin-bottom: 20px;
+}
+.card-body.card-title{
+	text-align: center;
+}
+.chart-bar{
+  margin=0;
+}
+ .judul-page {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 20px;
+}
