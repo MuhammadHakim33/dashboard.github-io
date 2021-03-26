@@ -1,34 +1,62 @@
+let labels1 = ['Electrical Device', 'Furnitur', 'Vehicle', 'IT Devive', 'Medical Devive'];
 
-// let labels1 = ['Treatment Rooms','Diagnose Rooms','Office Room','Toilet','intensive care unit Room'];
-// let data1 = [70,30,20,50,20];
-// let colors1 = ['#FFA801', '#05C46B', '#3C40C6','#1E272E','#82589F'];
+let myChart1 = document.getElementById('BAR1').getContext('2d');
 
-// let myChart1 = document.getElementById('PIE').getContext('2d');
+let chart1 = new Chart(myChart1, {
+	type: 'bar',
 
-// let chart1 = new Chart(myChart1, {
-// 	type: 'pie',
-// 	data: {
-// 		labels: labels1,
-// 		datasets: [ {
-// 			data: data1,
-// 			backgroundColor: colors1
-// 		}]
-// 	},
-// 	options:{
-// 		title:{
-// 			text:"TOP 5 Most Adequate room",
-// 			display: true
+    // The data for our dataset
+    data: {
+        labels: ['Electrical Device', 'Furnitur', 'IT Devive', 'Medical Devive'],
+        datasets: [{
+            label: "Good",
+            backgroundColor: '#0FBCF9',
+            borderColor: '#E6E3E2',
+            borderWidth: 3,
+            data: [80, 120, 60, 220],
+        },{
+        	label: "Slightly Damaged",
+            backgroundColor: '#FFA801',
+            borderColor: '#E6E3E2',
+            borderWidth: 3,
+            data: [20, 40, 15, 21],
+        },{
+        	label: "Heavily Damaged",
+            backgroundColor: '#F53B57',
+            borderColor: '#E6E3E2',
+            borderWidth: 3,
+            data: [6, 8, 12, 6],
+        },{
+        	label: "Unknown",
+            backgroundColor: 'gray',
+            borderColor: '#E6E3E2',
+            borderWidth: 3,
+            data: [10, 6, 10, 6],
+        },]
+    },
+    options :{
+    	title:{
+        text:"Hospital Item Condision Report 2021",
+        fontSize:25,
+        display:true
+      },
+      tooltips:{
+        mode:'index',
+      },
+      scales: {
+            xAxes: [{
+                stacked: true
+            }],
+            yAxes: [{
+                stacked: true
+            }]
+        },	
+    }
 
-// 		},
-// 		legend :{
-// 			position:'left'
-// 		}
-// 	}
-// });
-
-let labels2 = ['Baik (60%)','Rusak Ringan (28%)','Rusak (5%)','Rusak Berat (4%)','unknown (3%)'];
-let data2 = [384,178,33,26,19];
-let colors2 = ['#0FBCF9', '#FFA801', '#FD7272', '#F53B57','gray'];
+});
+let labels2 = ['Baik (60%)','Rusak Ringan (28%)','Rusak Berat (4%)','unknown (3%)'];
+let data2 = [384,178,26,19];
+let colors2 = ['#0FBCF9', '#FFA801', '#F53B57','gray'];
 
 let myChart2 = document.getElementById('DOUGHNUT').getContext('2d');
 
@@ -54,8 +82,7 @@ let chart2 = new Chart(myChart2, {
 	}
 });
 let labels3 = ['','2017','2018','2019','2020','2021'];
-let data3 = [0,100,310,220,510,450,640];
-let colors3 = ['#CDCDCD'];
+
 
 let myChart3 = document.getElementById('LINE').getContext('2d');
 
@@ -87,9 +114,7 @@ let chart3 = new Chart(myChart3, {
 			pointBorderColor:'#FFFFFF',
 			borderColor: '#05C46B'
 
-		},
-
-		]
+		},]
 	},
 	options:{
 		title:{
@@ -109,7 +134,7 @@ let chart3 = new Chart(myChart3, {
 			}
 });
 
-let labels4 = [' Medical Devices','Medical Equipment Unit','Medical Speareparts'];
+let labels4 = ['Medical Devices','Medical Equipment Unit','Medical Speareparts'];
 let data4 = [459,580,100];
 let colors4 = ['#72FCB6', '#1E272E', '#05C46B'];
 
