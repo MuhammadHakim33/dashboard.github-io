@@ -3,7 +3,7 @@ let labels1 = ['Electrical Device', 'Furnitur', 'Vehicle', 'IT Devive', 'Medical
 let myChart1 = document.getElementById('BAR1').getContext('2d');
 
 let chart1 = new Chart(myChart1, {
-	type: 'bar',
+	type: 'horizontalBar',
 
     // The data for our dataset
     data: {
