@@ -1,4 +1,4 @@
-let labels1 = ['Electrical Device', 'Furnitur', 'Vehicle', 'IT Devive', 'Medical Devive'];
+let labels1 = ['Electrical Device', 'Furnitur', 'Vehicle', 'IT Device', 'Medical Device'];
 
 let myChart1 = document.getElementById('BAR1').getContext('2d');
 
@@ -7,7 +7,7 @@ let chart1 = new Chart(myChart1, {
 
     // The data for our dataset
     data: {
-        labels: ['Electrical Device', 'Furnitur', 'IT Device', 'Medical Device'],
+        labels: labels1,
         datasets: [{
             label: "Good",
             backgroundColor: '#0FBCF9',
