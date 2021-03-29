@@ -7,7 +7,7 @@ let chart1 = new Chart(myChart1, {
 
     // The data for our dataset
     data: {
-        labels: ['Electrical Device', 'Furnitur', 'IT Devive', 'Medical Devive'],
+        labels: ['Electrical Device', 'Furnitur', 'IT Device', 'Medical Device'],
         datasets: [{
             label: "Good",
             backgroundColor: '#0FBCF9',
